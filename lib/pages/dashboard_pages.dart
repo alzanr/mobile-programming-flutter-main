@@ -7,6 +7,8 @@ import './jadwal_page.dart';
 import './profile_pages.dart';
 import './input_krs_page.dart';
 import './khs_page.dart';
+import 'ipk_page.dart';
+import 'pengaturan_page.dart';
 
 class DashboardPages extends StatefulWidget {
   const DashboardPages({super.key});
@@ -85,31 +87,30 @@ class _DashboardPagesState extends State<DashboardPages> {
   // ====== HANDLE MENU CLICK ======
  void _onMenuTap(String label) {
   if (label == "Matakuliah") {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const JadwalPage()),
-    );
+    Navigator.push(context, MaterialPageRoute(builder: (_) => const JadwalPage()));
+
   } else if (label == "Profil") {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const ProfilePages()),
-    );
+    Navigator.push(context, MaterialPageRoute(builder: (_) => const ProfilePages()));
+
   } else if (label == "KRS") {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const InputKrsPage()),
-    );
+    Navigator.push(context, MaterialPageRoute(builder: (_) => const InputKrsPage()));
+
   } else if (label == "KHS") {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const KhsPage()),
-    );
+    Navigator.push(context, MaterialPageRoute(builder: (_) => const KhsPage()));
+
+  } else if (label == "IPK") {
+    Navigator.push(context, MaterialPageRoute(builder: (_) => const IpkPage()));
+
+  } else if (label == "Pengaturan") {
+    Navigator.push(context, MaterialPageRoute(builder: (_) => const PengaturanPage()));
+
   } else {
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(SnackBar(content: Text('Menu "$label" belum tersedia')));
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text('Menu "$label" belum tersedia')));
   }
 }
+
+
 
 
   @override

@@ -25,7 +25,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'SIAKAD',
       theme: ThemeData(
-        // FIX 3: Gunakan warna konstan yang sudah dideklarasikan di luar
         colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
         primaryColor: primaryColor,
         appBarTheme: const AppBarTheme(

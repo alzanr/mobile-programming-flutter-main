@@ -74,7 +74,7 @@ class _LoginPagesState extends State<LoginPages> {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  "SIAKAD MOBILE",
+                  "MY SWU",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: primaryColor),
                 ),
